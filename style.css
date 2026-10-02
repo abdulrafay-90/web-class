@@ -382,8 +382,6 @@ footer hr{
     color: #94a3b8;
 }
 
-/* Tablet */
-
 @media (max-width: 992px){
 
     .hero{
@@ -426,7 +424,6 @@ footer hr{
     }
 }
 
-/* Mobile */
 
 @media (max-width: 768px){
 
