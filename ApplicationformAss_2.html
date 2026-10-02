@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+</head>
+<body>
+    <form style="border: 2px solid black;background-color: azure; width: 720px;" >
+        <h1 style="text-align: center;"><b><i>Application Form</i></b> </h1>
+        <p style="padding-left: 30px;"> Fields marked with <mark>*</mark> are required.</p>
+        <br>
+        <fieldset style="width: 670px;">
+            <legend style="border:1px solid black; background-color: cornflowerblue; color: white;">A. General Information</legend>
+            <br>
+                <label for="name">Proposed InSured's Full Name </label> <label style="color: red;">*</label>
+                  <label style="margin-left: 200px;" for="date">Birth Date </label><label style="color: red;">*</label>
+                <br>
+                <input style="width: 250px;" type="text" name="Rafay" id="name" required>
+                <input style="margin-left: 150px; width: 250px;" type="date"  min="2000-01-01" max="2026-12-31" required>
+                <br><br>
+                <label for="gender">Gender</label><br>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+                <br><br>
+                <label for="address">Address</label><label style="color: red;">*</label>
+                <br>
+                <textarea name="address" id="address" required></textarea>
+                <br><br>
+                <label for="phone">Phone Number</label><label style="color: red;">*</label>
+                <label style="margin-left:300px;" for="email">Email Address</label><label style="color: red;">*</label>
+                <br>
+                <input style="width:250px;" type="tel" placeholder="0312-3456789" id="phone" required>
+                <input style="margin-left: 145px; width: 250px;" type="email" placeholder="name@example.com" id="email" required>
+                <br><br>
+                <label for="cnic">ID / CNIC Number</label><label style="color: red;">*</label>
+                <label style="margin-left: 270px;" for="social">Social Security / Reference Number</label><label style="color: red;">*</label>
+                <br>
+                <input style="width: 250px;" type="text" placeholder="42101-1234567-1" id="cnic" required>
+                <input style="margin-left:145px; width: 250px;" type="text" name="Social" id="social" required>
+                <br><br>
+                <label for="marital">Marital Status</label><label style="color: red;">*</label>
+                <label style="margin-left: 305px;" for="occupation">Occupation</label><label style="color: red;">*</label>
+                <br>
+                <select style="width: 260px;" name="marital" id="marital">
+                    <option value="">Select Status</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                </select>
+                <input style="margin-left: 145px; width: 250px;" type="text" name="occupation" id="occupation">
+                <br><br>
+                <label for="retired">Are you Retired?</label><label style="color: red;">*</label>
+                <br>
+                <input type="radio" name="retired" id="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="retired" id="no">
+                <label for="no">No</label>
+        </fieldset>
+        <br>
+        <fieldset style="width: 645px;">
+            <legend style="border:1px solid black; background-color: cornflowerblue; color: white;">B. Type Of Health Coverage</legend>
+            <fieldset style="width: 640px;">
+                <legend >Employee Coverage</legend>
+                <input type="radio" name="employee" id="employee">
+                <label for="employee">Yes</label>
+                <input type="radio" name="employee" id="employee">
+                <label for="employee">No</label>
+                <br><br>
+                <label for="plan">Employee Plan Choice</label>
+                <br>
+                 <select style="width: 630px; height: 30px;" name="plan" id="plan">
+                    <option value="">Select plan</option>
+                    <option value="basic Plan">Basic Plan</option>
+                    <option value="standard Plan">Standard Plan</option>
+                    <option value="premium Plan">Premium Plan</option>
+                    <option value="executive Plan">Executive Plan</option>
+                    </select>
+                 </fieldset>
+
+                 <br> <br>
+
+                 <fieldset style="width: 640px;">
+                    <legend>Spouse Coverage</legend>
+                    <input type="radio" name="Spouse" id="spouse">
+                    <label for="spouse">Yes</label>
+                    <input type="radio" name="Spouse" id="spouse">
+                    <label for="spouse">No</label>
+                    <br><br>
+                    <label for="spouseplan">Spouse Plan Choice</label>
+                    <br>
+                    <select style="width: 630px; height: 30px;"name="spouseplan" id="spouseplan">
+                         <option value="">Select plan</option>
+            <option value="basic">Basic Plan</option>
+            <option value="standard">Standard Plan</option>
+            <option value="premium">Premium Plan</option>
+            <option value="executive">Executive Plan</option>
+                    </select>
+                 </fieldset>
+                 <br><br>
+                 <fieldset style="width: 640px;">
+                    <legend>Children Coverage</legend>
+                    <input type="radio" name="childplan" id="childplan">
+                    <label for="childplan">Yes</label>
+                    <input type="radio" name="childplan" id="childplan">
+                    <label for="childplan">No</label>
+                    <br><br>
+                    <label for="childplanchoice">Children Plan Choice</label>
+                    <br>
+                    <select style="width: 630px; height: 30px;"name="childplanchoice" id="childplanchoice">
+                         <option value="">Select plan</option>
+                         <option value="basic">Basic Plan</option>
+                         <option value="standard">Standard Plan</option>
+                         <option value="premium">Premium Plan</option>
+                         <option value="executive">Executive Plan</option>
+                    </select>
+
+                 </fieldset>
+                </fieldset>
+                <br>
+                <fieldset style="width: 670px;">
+                     <legend style="border:1px solid black; background-color: cornflowerblue; color: white;">C. Spouse / Children Information</legend>
+                     <label style="width:250px ;" for="dependentname"> Dependent Name</label>
+                     <label style="margin-left: 300px;" for="id/ssn">ID / SSN</label>
+                     <br>
+                     <input style="width: 255px;" type="text" name="dependentname" id="dependentname">
+                     <input style="margin-left:150px; width: 240px;" type="text" name="id/ssn" id="id/ssn">
+                     <br><br>
+                     <label for="relation">Relationship</label>
+                      <label style="margin-left: 330px;" for="date">Birth Date </label>
+                     <br>
+                     <select style="width: 260px;" name="relation" id="relation">
+                        <option value="">Select Relationship</option>
+                        <option value="spouse">Spouse</option>
+                        <option value="son">Son</option>
+                        <option value="daughter">Daughter</option>
+                        <option value="other">Other</option>
+                     </select>
+                     <input style="margin-left: 150px; width: 250px;" type="date"  min="2000-01-01" max="2026-12-31" required>
+                     <br><br>  
+                     <label for="age">Age</label>          
+                 <label style="margin-left: 380px;" for="childgender">Gender</label>
+                 <br>
+                 <input style="width: 250px;" type="number" name="age" id="age">
+                     <select style="width: 255px;margin-left: 150px;" name="childgender" id="childgender">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                     </select>
+                </fieldset>
+                <br>
+                <fieldset style="width:670px;">
+                     <legend style="border:1px solid black; background-color: cornflowerblue; color: white;">D. Policy Information</legend>
+                     <label for="unit">Units</label>
+                     <label style="margin-left: 370px;" for="annual"> Annual Premium</label>
+                     <br>
+                     <input style="width: 250px;" type="text" name="units" id="unit">
+                     <input style="margin-left: 145px; width: 250px;" type="text" name="annual" id="annual">
+                     <br><br>
+                     <label for="paymentmode">Payment Mode</label><label style="color: red;">*</label>
+                     <br>
+                     <select style="width: 650px; height: 30px;"name="paymentmode" id="paymentmode" required>
+                        <option value="">Select Payment Mode</option>
+                        <option value="cash">Cash</option>
+                        <option value="credit card">Credit Card</option>
+                        <option value="debit card">Debit Card</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                     </select>
+                     <br><br>
+                     <label for="cashapplication">Cash With Application</label>
+                     <label style="margin-left:260px ;" for="planmonthly">Planned Monthly Premium</label>
+                     <br>
+                     <input style="width: 250px;" type="text" name="cashapplication" id="cashapplication">
+                     <input style="margin-left:145px; width: 250px;" type="text" name="planmonthly" id="planmonthly">
+                </fieldset>
+                <br>
+                <fieldset style="width:670px;">
+                    <legend style="border:1px solid black; background-color: cornflowerblue; color: white;">E. Required Document</legend>
+                     <p style="padding-left: 10px;">Please attach your supporting document before submitting the application.</p>
+                     
+                     <label for="document"> Attach Document</label><label style="color: red;">*</label>
+                     <br>
+                     <fieldset><input type="file" id="document" name="document" accept=".pdf,.jpg,.jpeg,.png" required>
+                    </fieldset>
+                    <p style="color:gray;"> Accepted formats: PDF, JPG, JPEG and PNG</p> 
+                </fieldset>
+                <br>
+                <fieldset style="width:670px;">
+                    <legend style="border:1px solid black; background-color: cornflowerblue; color: white;">F. Declaration</legend>
+                    <input type="checkbox" name="line" id="line">
+                    <label for="line">I confirm that the informtion provide in this application is complete and accurate.</label>
+                    <br><br>
+                    <label for="appfullname">Applicant Full Name / Signature</label><label style="color: red;">*</label>
+                    <label style="margin-left: 200px;" for="appdate">Applicant Date</label><label style="color: red;">*</label>
+                    <br>
+                    <input style="width: 250px;" type="text" name="appfullname" id="appfullname" required>
+                    <input style="margin-left: 155px; width: 240px;" type="date" required>
+
+                </fieldset>
+                <br>
+                <input style="margin-left: 450px; margin-right: 30px; margin-bottom: 20px;"  type="reset" value="Clear Form">
+                <input style="border:2px solid black;padding: 2px; background-color: cornflowerblue; color: white;" type="submit" value="Submit Application">
+    </form>
+
+    
+</body>
+</html>
