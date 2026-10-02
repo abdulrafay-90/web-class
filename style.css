@@ -381,3 +381,127 @@ footer hr{
     text-align: center;
     color: #94a3b8;
 }
+
+/* Tablet */
+
+@media (max-width: 992px){
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding-top: 40px;
+    }
+
+    .hero-content,
+    .hero-image{
+        width: 100%;
+    }
+
+    .hero-content h1{
+        font-size: 55px;
+    }
+
+    .sneaker-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .category-container,
+    .arrival-container,
+    .video-container{
+        flex-wrap: wrap;
+    }
+
+    .stats{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-container{
+        flex-direction: column;
+    }
+
+    .footer-about{
+        width: 100%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content h1{
+        font-size: 42px;
+    }
+
+    .description{
+        font-size: 16px;
+    }
+
+    .sneaker-container{
+        grid-template-columns: 1fr;
+    }
+
+    .category-card,
+    .arrival-card{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .video-container video{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .section-heading h2{
+        font-size: 30px;
+    }
+
+    .stat-box h2{
+        font-size: 32px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px){
+
+    .logo h2{
+        font-size: 22px;
+    }
+
+    .hero-content h1{
+        font-size: 34px;
+    }
+
+    .small-text{
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .btn{
+        padding: 12px 25px;
+    }
+
+    .section-heading h2{
+        font-size: 26px;
+    }
+
+    .featured,
+    .categories,
+    .new-arrivals,
+    .video-showcase{
+        padding: 60px 5%;
+    }
+}
