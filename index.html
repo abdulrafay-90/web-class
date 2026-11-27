@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c1023" />
+    <meta
+      name="description"
+      content="Search current weather and a five-day forecast for cities worldwide."
+    />
+    <title>Cloudline — Your Weather, Beautifully Simple</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-theme="day">
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="Cloudline home"
+          ><span class="brand-symbol" aria-hidden="true">☁</span>cloudline<span
+            class="dot"
+            >.</span
+          ></a
+        >
+        <button
+          id="unitToggle"
+          class="pill"
+          type="button"
+          aria-label="Switch temperature unit"
+        >
+          °C
+        </button>
+      </header>
+      <main>
+        <section class="intro">
+          <p class="eyebrow">YOUR SKY, AT A GLANCE</p>
+          <h1>A little clarity,<br /><em>whatever the weather.</em></h1>
+          <form id="searchForm" class="search-form" role="search">
+            <label for="cityInput" class="visually-hidden">City name</label>
+            <input
+              id="cityInput"
+              type="search"
+              placeholder="Search a city, e.g. Karachi"
+              autocomplete="off"
+              maxlength="80"
+            />
+            <button
+              id="geoButton"
+              class="icon-btn"
+              type="button"
+              title="Use my location"
+              aria-label="Use my location"
+            >
+              ◎
+            </button>
+            <button id="searchButton" class="search-button" type="submit">
+              <span id="searchButtonText">Get weather</span
+              ><span id="searchSpinner" class="spinner" hidden></span>
+            </button>
+          </form>
+          <div class="suggestions" aria-label="Try a popular city">
+            <span class="label">TRY:</span>
+            <button type="button" class="chip" data-city="Karachi">
+              Karachi
+            </button>
+            <button type="button" class="chip" data-city="Lahore">
+              Lahore
+            </button>
+            <button type="button" class="chip" data-city="Islamabad">
+              Islamabad
+            </button>
+            <button type="button" class="chip" data-city="London">
+              London
+            </button>
+          </div>
+          <div class="suggestions" id="recentWrap" hidden>
+            <span class="label">RECENT:</span
+            ><span id="recentList" class="recent"></span>
+          </div>
+        </section>
+        <div
+          id="statusMessage"
+          class="status-message"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></div>
+        <section id="emptyState" class="empty-state">
+          <span class="empty-icon" aria-hidden="true">🌤️</span>
+          <p>Search for a city to see its weather.</p>
+        </section>
+        <div id="weatherPanel" class="weather-panel" hidden>
+          <section class="today-card" aria-labelledby="current-heading">
+            <div class="today-left">
+              <p class="tag">
+                CURRENT CONDITIONS / <span id="localTime">—</span>
+              </p>
+              <h2 id="current-heading" class="city-heading">—</h2>
+              <p id="countryName" class="country">—</p>
+              <div class="temp-line">
+                <span id="temperature" class="temperature">--°</span
+                ><span
+                  id="weatherIcon"
+                  class="weather-emoji"
+                  role="img"
+                  aria-label="Weather icon"
+                  >☀️</span
+                >
+              </div>
+              <p id="weatherDescription" class="desc">—</p>
+              <p class="feels">Feels like <strong id="feelsLike">—</strong></p>
+            </div>
+            <div class="today-right" aria-hidden="true">
+              <div class="sun-disc"></div>
+              <div class="cloud"></div>
+            </div>
+          </section>
+          <section class="metrics" aria-label="Weather measurements">
+            <article class="metric-card">
+              <span class="metric-label">Humidity</span
+              ><strong id="humidity" class="metric-value">—</strong>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Wind speed</span
+              ><strong id="windSpeed" class="metric-value">—</strong>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Precipitation</span
+              ><strong id="precipitation" class="metric-value">—</strong>
+            </article>
+          </section>
+          <section aria-labelledby="forecast-heading">
+            <p class="eyebrow">LOOKING AHEAD</p>
+            <h2 id="forecast-heading" class="section-title">
+              The next five days
+            </h2>
+            <div id="forecastList" class="forecast-list"></div>
+          </section>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <span>Made for learning async JavaScript.</span
+        ><span
+          >Weather data by
+          <a
+            href="https://open-meteo.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open-Meteo</a
+          ></span
+        >
+      </footer>
+    </div>
+  </body>
+</html>
